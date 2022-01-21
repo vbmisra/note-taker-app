@@ -1,5 +1,4 @@
 // import express and routes for pages and notes
-const { urlencoded } = require('express');
 const express = require('express');
 const noteRoutes = require('./routes/noteRoutes')
 const pageRoutes = require('./routes/pageRoutes')
