@@ -1,12 +1,15 @@
+// import express and routes for pages and notes
 const express = require('express');
-const path = require('path');
-const fs = require('fs');
-const util = require('util');
+const noteRoutes = require('./routes/noteRoutes')
+const pageRoutes = require('./routes/pageRoutes')
+
 
 const app = express();
 const PORT = process.env.PORT || 3002;
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static('public'));
+app.use(express.json())
 
+
+app.listen(PORT, () => 
+    console.log(`App listening at ${PORT}`)
+)
